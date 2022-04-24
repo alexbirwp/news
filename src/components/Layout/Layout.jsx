@@ -5,7 +5,6 @@ import Header from "./Header";
 
 const Layout = ({children}) => {
     const [showPopup, setShowPopup] =  useState(false);
-    console.log(showPopup);
     return (
         <>
             <Header setShowPopup={() => setShowPopup(true)}/>
