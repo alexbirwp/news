@@ -1,7 +1,7 @@
 import styles from './Button.module.scss';
 
-const Button = ({children, className, ...props}) => {
-    const fullClassName = `${styles.button} ${className}`
+const Button = ({children, useType, ...props}) => {
+    const fullClassName = `${styles.button} ${useType ?  styles[useType] : ''}`
     return (
         <button 
         className={fullClassName}

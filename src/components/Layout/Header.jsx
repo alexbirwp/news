@@ -4,7 +4,7 @@ import Button from "./Button";
 import Container from "./Container";
 import styles from './Header.module.scss';
 
-const Header = () => {
+const Header = ({setShowPopup}) => {
     return (
     <header 
     className={styles['header']}>
@@ -26,7 +26,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Button>Вход</Button>
+                        <Button onClick={setShowPopup}>Вход</Button>
                     </li>
                 </ul>
             </nav>

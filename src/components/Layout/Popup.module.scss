@@ -1,0 +1,38 @@
+.popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .popup-content {
+        background-color: #fff;
+        padding: 15px;
+        width: 500px;
+        max-width: calc(100% - 30px);
+        border-radius: 10px;
+    }
+    
+    &_shown {
+        display: flex;
+
+        .popup-content {
+            animation: show-popup .4s forwards;
+        }
+    }
+
+
+    @keyframes show-popup {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}

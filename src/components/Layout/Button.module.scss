@@ -1,13 +1,25 @@
 .button {
     padding: 10px;
-    border: solid 1px rgb(208, 58, 58);
+    border: solid 1px;
     background-color: transparent;
     border-radius: 5px;
-    color: rgb(208, 58, 58);
     transition: all linear .3s;
     cursor: pointer;
-}
-.button:hover {
-    color: #fff;
-    background-color: rgb(208, 58, 58);
+    border-color: rgb(208, 58, 58);
+    color: rgb(208, 58, 58);
+
+    &:hover {
+        color: #fff;
+        background-color: rgb(208, 58, 58);
+    }
+
+    &.cancel {
+        border-color: #000;
+        color: #000;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
 }

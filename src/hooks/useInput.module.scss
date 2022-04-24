@@ -1,0 +1,22 @@
+.input {
+    margin-bottom: 15px;
+
+    .input-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .input-element {
+        border: solid 3px #000;
+        border-radius: 5px;
+        padding: 10px 15px;
+        background-color: transparent;
+        color: #000;
+        width: 100%;
+    }
+
+    &_error {
+        .input-element {
+            border-color: red;
+        }
+    }
+}
