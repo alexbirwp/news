@@ -16,11 +16,10 @@ const users = [
 
 
 export const logInUser = (login, password) => {
-    return async (dispatch) => {
+    return (dispatch) => {
         const currentUser = users.find(user => user.login === login);
         if (!currentUser || currentUser.password !== password) {
-            dispatch(setLoginError('Неверный логин или пароль'));
-            return;
+            return 'Неверный логин или пароль';
         }
         
         dispatch(logIn({login: currentUser.login, role: currentUser.role}))

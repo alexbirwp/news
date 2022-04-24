@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import useInput from "../../hooks/useInput";
+import { logInUser } from "../../store/userActions";
 import Button from "../Layout/Button";
 import styles from './Login.module.scss';
 
 const Login = ({onCancel}) => {
+    const dispatch = useDispatch();
     const [
         nameInput,
         nameValue,
@@ -16,10 +19,9 @@ const Login = ({onCancel}) => {
         setPasswordValue,
         setPasswordError
     ] = useInput('Пароль', 'password', 'password');
-
     const [errorText, setErrorText] = useState('');
 
-    const submitFormHandler = e => {
+    const submitFormHandler = async (e) => {
         e.preventDefault();
         const name = nameValue.trim();
         const password = passwordValue.trim();
@@ -33,7 +35,13 @@ const Login = ({onCancel}) => {
             return;
         }
 
-        console.log(errorText);
+        const error = await logInUser(name, password)(dispatch);
+        if (error) {
+            setErrorText(error);
+            return;
+        }
+
+        onCancel();
     }
     return (
         <form 
