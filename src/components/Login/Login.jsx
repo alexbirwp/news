@@ -41,6 +41,8 @@ const Login = ({onCancel}) => {
             return;
         }
 
+        setNameValue('');
+        setPasswordValue('')
         onCancel();
     }
     return (

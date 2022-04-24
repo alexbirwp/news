@@ -1,4 +1,4 @@
-import { logIn, setLoginError } from "./userSlice";
+import { logIn } from "./userSlice";
 
 //без бэкенда
 const users = [
@@ -14,10 +14,14 @@ const users = [
     }
 ]
 
+// имитация задежки от сервера
+const imitPending = new Promise(res => setTimeout(res, 2000));
+
 
 export const logInUser = (login, password) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         const currentUser = users.find(user => user.login === login);
+        await imitPending;
         if (!currentUser || currentUser.password !== password) {
             return 'Неверный логин или пароль';
         }
