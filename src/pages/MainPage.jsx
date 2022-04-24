@@ -1,6 +1,8 @@
 
 const MainPage = () => {
-    return <></>
+    return (
+        <h1>Привет, Гость</h1>
+    );
 };
 
 

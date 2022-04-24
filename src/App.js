@@ -1,5 +1,7 @@
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import MainPage from "./pages/MainPage";
+import NewsPage from "./pages/NewsPage";
 
 
 function App() {
@@ -7,7 +9,12 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          
+          <Route 
+          path="/"
+          element={<MainPage />} />
+          <Route
+          path="/news"
+          element={<NewsPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

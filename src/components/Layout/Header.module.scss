@@ -1,0 +1,36 @@
+.header {
+    padding: 10px 0;
+    background-color: #ccc;
+    margin-bottom: 10px;
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-logo {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+
+            @media (max-width: 500px) {
+                max-width: 150px;
+            }
+        }
+
+        .header-ul {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            
+            li a {
+                color: #000;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
