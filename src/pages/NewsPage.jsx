@@ -1,6 +1,14 @@
+import News from "../components/News/News";
 
 const NewsPage = () => {
-    return <></>
+
+
+    return (
+        <>
+            <h1>Новости</h1>
+            <News />
+        </>
+    )
 };
 
 

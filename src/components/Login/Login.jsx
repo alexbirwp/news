@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import useInput from "../../hooks/useInput";
 import { logInUser } from "../../store/userActions";
 import Button from "../Layout/Button";
-import styles from './Login.module.scss';
+import styles from './Form.module.scss';
 
 const Login = ({onCancel}) => {
     const dispatch = useDispatch();
@@ -31,7 +31,6 @@ const Login = ({onCancel}) => {
             if (!name.length) setNameError(true);
             if (!password.length) setPasswordError(true);
             setErrorText('Заполните необходимые поля');
-            console.log(errorText);
             return;
         }
 

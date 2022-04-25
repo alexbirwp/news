@@ -5,12 +5,12 @@ const users = [
     {
         login: 'user', 
         password: 'user',
-        role: 'user'
+        role: 'user',
     },
     {
         login: 'admin', 
         password: 'admin',
-        role: 'admin'
+        role: 'admin',
     }
 ]
 
@@ -26,6 +26,9 @@ export const logInUser = (login, password) => {
             return 'Неверный логин или пароль';
         }
         
-        dispatch(logIn({login: currentUser.login, role: currentUser.role}))
+        dispatch(logIn({
+            login: currentUser.login, 
+            role: currentUser.role
+        }))
     }
 }

@@ -14,6 +14,19 @@ const useInput = (
         setError(false);
     }
 
+    const inputElement = inputType !== 'textarea' ? (
+        <input 
+        className={styles['input-element']}
+        value={value}
+        onChange={inputChangeHandler}
+        type={inputType} />
+    ) : (
+        <textarea 
+        className={styles['input-element']}
+        value={value}
+        onChange={inputChangeHandler}></textarea>
+    );
+
     const input = (
         <div className={`${styles['input']} ${error ? styles['input_error'] : ''}`}>
             <label 
@@ -21,11 +34,7 @@ const useInput = (
             htmlFor={inputId}>
                 {inputLabel}
             </label>
-            <input 
-            className={styles['input-element']}
-            value={value}
-            onChange={inputChangeHandler}
-            type={inputType} />
+            {inputElement}
         </div>
     );
 
