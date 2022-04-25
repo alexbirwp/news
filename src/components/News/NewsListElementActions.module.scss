@@ -1,0 +1,19 @@
+.actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    .actions-element {
+        display: block;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        background-color: transparent;
+
+        img {
+            width: 30px;
+            height: auto;
+        }
+    }
+}

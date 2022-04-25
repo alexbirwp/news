@@ -22,7 +22,7 @@ const NewsList = () => {
         <div className={styles.newslist}>
             {filteredNews.map(currentNews => 
             <NewsListElement 
-            idAdmin={isUserAdmin}
+            isAdmin={isUserAdmin}
             element={currentNews}
             key={currentNews.id} />)
             }

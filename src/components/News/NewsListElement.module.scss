@@ -1,0 +1,25 @@
+.newselement {
+    border: solid 3px red;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .newselement-header {
+        border-bottom: solid 3px red;
+        background-color: #ccc;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .newselement-info {
+            font-weight: 600;
+
+            .newselement-date{
+                font-size: 11px;
+            }
+        }
+    }
+    .newselement-body {
+        padding: 10px 15px;
+    }
+}
